@@ -1,0 +1,41 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tritón Arpones | Catálogo</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="top"><div class="nav"><a class="brand" href="index.html"><img src="logo.jpg" alt="Tritón">TRITÓN</a>
+<div class="navlinks"><a href="index.html">Inicio</a><a href="index.html#productos">Productos</a><a href="index.html#categorias">Categorías</a><a href="index.html#contacto">Contacto</a></div></div></div>
+
+<section class="hero"><div class="hero-content"><img class="logo-big" src="logo.jpg" alt="Logo Tritón Arpones">
+<h1>TRITÓN <span>ARPONES</span></h1><p>Catálogo digital de productos para pesca submarina. Encuentra tu equipo, abre su ficha y consulta directamente.</p>
+<div class="actions"><a class="btn" href="#productos">🔱 Explorar productos</a><a class="btn green" href="#contacto">💬 WhatsApp</a></div></div></section>
+
+<section class="section" id="productos"><div class="section-head"><div><h2>Productos destacados</h2><p>Encuentra tu producto en pocos segundos.</p></div></div>
+<div class="filters">
+<button class="filter active" onclick="filtrar('todos',this)">Todos</button><button class="filter" onclick="filtrar('arpon',this)">Arpones</button><button class="filter" onclick="filtrar('careta',this)">Caretas</button><button class="filter" onclick="filtrar('linterna',this)">Linternas</button><button class="filter" onclick="filtrar('sorfin',this)">Sorfín</button>
+</div>
+<div class="products">
+<article class="card" data-cat="arpon"><a href="triton-40.html"><div class="card-media"><img src="arpon-40.jpg.png" alt="Tritón 40 cm"></div></a><div class="card-body"><h3>Tritón 40 cm</h3><p>Arpón semiprofesional.</p><div class="card-bottom"><span class="small-btn">Ver ficha →</span></div></div></article>
+<article class="card" data-cat="arpon"><a href="triton-50.html"><div class="card-media"><img src="arpon-50.jpg.jpeg" alt="Tritón 50 cm"></div></a><div class="card-body"><h3>Tritón 50 cm</h3><p>Modelo de 50 cm con ficha propia.</p><div class="card-bottom"><span class="small-btn">Ver ficha →</span></div></div></article>
+<article class="card" data-cat="arpon"><a href="triton-60.html"><div class="card-media"><img src="arpon-60.png" alt="Tritón 60 cm"></div></a><div class="card-body"><h3>Tritón 60 cm</h3><p>Nuevo modelo de 60 cm.</p><div class="card-bottom"><span class="small-btn">Ver ficha →</span></div></div></article>
+<article class="card" data-cat="careta"><a href="careta.html"><div class="card-media"><img src="careta.jpeg" alt="Careta"></div></a><div class="card-body"><h3>Careta</h3><p>Equipo para actividades acuáticas y pesca submarina.</p><div class="card-bottom"><span class="price">$110.000</span><span class="small-btn">Ver ficha →</span></div></div></article>
+<article class="card" data-cat="linterna"><a href="linterna.html"><div class="card-media"><img src="linterna.jpeg" alt="Linterna sumergible"></div></a><div class="card-body"><h3>Linterna</h3><p>Presentación con estuche y accesorios.</p><div class="card-bottom"><span class="small-btn">Ver ficha →</span></div></div></article>
+<article class="card" data-cat="sorfin"><a href="sorfin.html"><div class="card-media"><img src="sorfin.jpg" alt="Sorfín"></div></a><div class="card-body"><h3>Sorfín</h3><p>Accesorio de equipo submarino.</p><div class="card-bottom"><span class="price">$140.000</span><span class="small-btn">Ver ficha →</span></div></div></article>
+</div></section>
+
+<section class="section" id="categorias"><div class="section-head"><div><h2>Categorías</h2><p>Acceso rápido a tu tipo de equipo.</p></div></div>
+<div class="info-grid"><div class="info"><strong>🔱 Arpones</strong><span>40 cm, 50 cm, 60 cm y más modelos.</span></div><div class="info"><strong>🥽 Caretas</strong><span>Modelos para complementar tu equipo.</span></div><div class="info"><strong>🔦 Linternas</strong><span>Opciones sumergibles.</span></div><div class="info"><strong>🦶 Sorfín</strong><span>Accesorios submarinos.</span></div></div></section>
+
+<section class="section"><div class="banner"><div><h2>✨ Marcación láser</h2><p>Presenta la personalización como un servicio independiente dentro del catálogo.</p><div class="actions" style="justify-content:flex-start"><a class="btn" href="marcacion.html">Ver marcación</a></div></div><img src="marcacionlaser.png" alt="Marcación láser"></div></section>
+
+<section class="contact" id="contacto"><h2>¿Necesitas ayuda?</h2><p>Consulta disponibilidad, precios o un producto específico.</p><a class="btn green" href="https://wa.me/57TU_NUMERO">💬 Consultar por WhatsApp</a></section>
+<footer><strong>TRITÓN ARPONES</strong><br><br>Precisión · Resistencia · Calidad · © 2026</footer>
+
+<div class="modal" id="modal" onclick="closeModal()"><button class="close">×</button><img id="modalImg" src="" alt=""></div>
+
+<script>
+function openModal(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function filtrar(cat,btn){
+ document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+ btn.classList.add('active');
+ document.querySelectorAll('.card').forEach(c=>c.style.display=(cat==='todos'||c.dataset.cat===cat)?'block':'none');
+}
+</script></body></html>
