@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tritón 60 cm | Tritón Arpones</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top"><div class="nav">
+<a class="brand" href="index.html"><img src="logo.jpg" alt="Tritón">TRITÓN</a>
+<div class="navlinks">
+<a href="index.html">Inicio</a>
+<a href="index.html#productos">Productos</a>
+<a href="index.html#categorias">Categorías</a>
+<a href="index.html#contacto">Contacto</a>
+</div></div></div>
+
+<main class="product-page">
+<a class="back" href="index.html#productos">← Volver al catálogo</a>
+<div class="product-layout">
+<div>
+<div class="product-photo">
+<img src="arpon-60.png" onclick="openModal(this.src)" alt="Tritón 60 cm">
+</div>
+</div>
+<div class="product-info">
+<div class="kicker">ARPÓN TRITÓN</div>
+<h1>Tritón 60 cm</h1>
+<p class="lead">Nuevo modelo Tritón de 60 cm.</p>
+<div class="specs">
+<div class="spec"><b>Longitud:</b> 60 cm</div>
+</div>
+<div class="actions" style="justify-content:flex-start">
+<a class="btn green" href="https://wa.me/573209865724?text=Hola%20Tritón,%20quiero%20información%20del%20arpón%20de%2060%20cm">💬 Consultar por WhatsApp</a>
+</div>
+</div></div>
+</main>
+
+<footer><strong>TRITÓN ARPONES</strong><br><br>© 2026</footer>
+<div class="modal" id="modal" onclick="closeModal()"><button class="close">×</button><img id="modalImg" src="" alt=""></div>
+
+<script>
+function openModal(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+</script>
+</body>
+</html>
