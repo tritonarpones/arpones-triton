@@ -6,6 +6,32 @@ a{text-decoration:none;color:inherit}.top{position:sticky;top:0;z-index:50;backg
 .nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 18px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px}.brand img{width:42px;height:42px;border-radius:50%;border:1px solid white}
 .navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.navlinks a{padding:9px 12px;border-radius:20px;color:#d7f7ff;font-size:13px}.navlinks a:hover{background:rgba(40,216,255,.12)}
 .hero{min-height:640px;display:grid;place-items:center;text-align:center;padding:55px 18px;background:linear-gradient(rgba(0,8,14,.42),rgba(0,15,25,.88)),url("assets/arpon-40.jpg.png") center/cover}
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 10, 18, 0.55);
+    z-index: 1;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 2;
+}
 .hero-content{max-width:900px;padding:42px 25px;border:1px solid rgba(255,255,255,.14);border-radius:30px;background:rgba(0,10,17,.58);backdrop-filter:blur(8px);box-shadow:0 30px 90px rgba(0,0,0,.55)}
 .logo-big{width:105px;height:105px;border-radius:50%;border:2px solid white;box-shadow:0 0 35px rgba(40,216,255,.3)}.hero h1{font-size:clamp(38px,7vw,72px);letter-spacing:5px;margin:18px 0 10px}.hero h1 span{color:var(--cyan)}
 .hero p{max-width:700px;margin:auto;color:#d4f5fc;line-height:1.7;font-size:17px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
